@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Meme Machine</title>
 </head>
 <body>
-    hello world
+
+<!-- <H1>Meme Machine</H1>
+    <form>
+        <p>Top Text:
+            <input name="toptext" 
+            type="text" 
+            placeholder="One does not simply" 
+            minlength="5" 
+            maxlength="50">
+        </p>
+    </form>
+    <form>
+        <p>Bottom Text:
+            <input name="bottomtext" 
+            type="text" 
+            placeholder="make a meme" 
+            minlength="5" 
+            maxlength="50">
+        </p>
+    </form>
+    <button>Show me the meme!</button>
+    <button>Surprise me!</button>
+
+
+     -->
+
+<div class="wrapper">
+    <h1>Meme Machine</h1><br>
+    <p>Make a meme! ...Or let the fates decide a meme for you.</p><br>
+  
+    <form class="form-start" id="form">
+    <input type="text" class="box" id="top" placeholder="Top Text" pattern="^[^\s].[A-Za-z\s]+[^\s]$" focus>
+
+    <input type="text" class="box" id="bottom" placeholder="Bottom Text" pattern="^[^\s].[A-Za-z\s]+[^\s]$" focus>
+
+    <input type="file" class="box" accept="image/*" onchange="loadFile(event)"> 
+      <p><img id="output" width="200"/></p>
+
+      <img src="C:\Users\thewi\OneDrive\Documents\Bootcamp\Meme Generator\stockmemes\sample.jpg" alt="meme" class="box" id="meme">
     
+    <input type="button" class="btn-hover color-1" id="submit" onclick="displayResult()" value="Make a meme!!">
+
+     <input type="button" class="btn-hover color-2" id="submit" onclick="displayResult()" value="Suprise me...( ͡° ͜ʖ ͡°)">
+    
+    </form>
+  </div>
+  
+  
 </body>
 </html>
